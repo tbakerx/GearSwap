@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/timbaker/Documents/dev/GearSwap/GearSwap/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher.png",
+        "source": "/home/timbaker/Documents/dev/GearSwap/GearSwap/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/timbaker/Documents/dev/GearSwap/GearSwap/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/logo.png",
+        "source": "/home/timbaker/Documents/dev/GearSwap/GearSwap/android/app/src/main/res/mipmap-xxhdpi/logo.png"
+    }
+]
