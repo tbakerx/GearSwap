@@ -1,5 +1,5 @@
 ## GearSwap
-<p align="center">
+<p>
   <img width="250" height="250" src="logo.png">
 </p>
 
