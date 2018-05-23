@@ -14,7 +14,7 @@ export default class Logo extends Component<{}> {
                  source={require('../../src/images/logo.png')} />
           <Text style={styles.logoText}>Gear<Text style={styles.logoTextAlt}>Swap </Text></Text>
         </View>
-    )
+    );
   }
 }
 

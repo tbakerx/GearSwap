@@ -6,6 +6,7 @@ import {
   TouchableOpacity
 } from 'react-native';
 import {Actions} from 'react-native-router-flux';
+import ItemList from '../components/ItemList';
 
 
 export default class Home extends Component<{}> {
@@ -21,7 +22,7 @@ export default class Home extends Component<{}> {
       return (
         <View style={styles.container}>
             <View style={styles.topBar}><Text style={styles.headerText}>GearSwap</Text></View>
-            <View style={styles.main}><Text style={styles.headerText}>Main items Grid Scrollview</Text></View>
+            <View style={styles.main}><ItemList/></View>
             <View style={styles.bottomBar}>
             <TouchableOpacity onPress={this.signUp}><Text style={styles.signUpButton}>Sign Up</Text></TouchableOpacity>
             <TouchableOpacity onPress={this.Login}><Text style={styles.signUpButton}>Login</Text></TouchableOpacity>
