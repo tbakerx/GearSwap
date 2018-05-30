@@ -7,9 +7,17 @@ import{
 } from 'react-native';
 
 export default class Item extends Component<{}> {
+
+    constructor(props){
+        super(props);
+    }
+
+
     render(){
       return(
-          
+         <View style={styles.item} >
+            <Text>{this.props.size}</Text>
+         </View> 
       );
     }
   }
@@ -17,8 +25,7 @@ export default class Item extends Component<{}> {
 const styles = StyleSheet.create({
 item: {
     backgroundColor: '#CCC',
-    margin: 10,
-    width: 100,
-    height: 100
+    width: 50,
+    height: 50
 }
 });  
