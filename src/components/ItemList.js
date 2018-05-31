@@ -48,7 +48,7 @@ import{
       let size = this._calculateItemSize();  
       let items = this.Item_List.map(function(item,key){
           return(
-            <Item title={item.toString()} size={size}></Item>
+            <Item key={key} title={item.toString()} size={size}></Item>
           )
       });
 
@@ -63,7 +63,7 @@ import{
 
   const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#FAA',
+        backgroundColor: '#bc8600',
         padding: paddingValue
     },  
     list: {

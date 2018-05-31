@@ -6,6 +6,8 @@ import{
   Image
 } from 'react-native';
 
+const marginValue = 8;
+
 export default class Item extends Component<{}> {
 
     constructor(props){
@@ -14,9 +16,11 @@ export default class Item extends Component<{}> {
 
 
     render(){
+        let size = this.props.size;
       return(
-         <View style={styles.item} >
-            <Text>{this.props.size}</Text>
+         <View style={[{width:size, height:size}, styles.item]} >
+         <Image style={{width:size}} source={require('../../src/images/test.jpg')} />
+            <Text style={styles.text} >{size}</Text>
          </View> 
       );
     }
@@ -25,7 +29,13 @@ export default class Item extends Component<{}> {
 const styles = StyleSheet.create({
 item: {
     backgroundColor: '#CCC',
-    width: 50,
-    height: 50
+    justifyContent: 'space-around',
+    margin: marginValue 
+},
+text: {
+   padding: 4,
+   height: 40,
+   backgroundColor: '#aaa',
+   alignSelf: 'stretch'
 }
 });  
