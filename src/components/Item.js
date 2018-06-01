@@ -19,8 +19,8 @@ export default class Item extends Component<{}> {
         let size = this.props.size;
       return(
          <View style={[{width:size, height:size}, styles.item]} >
-         <Image style={{width:size}} source={require('../../src/images/test.jpg')} />
-            <Text style={styles.text} >{size}</Text>
+            <Image style={[{width:size}, styles.image]} source={require('../../src/images/test.jpg')} />
+            <View style={styles.itemInfo}><Text style={styles.text} >Test Item</Text></View>
          </View> 
       );
     }
@@ -32,10 +32,15 @@ item: {
     justifyContent: 'space-around',
     margin: marginValue 
 },
+image:{
+    flex:9
+},
+itemInfo:{
+    alignItems: 'center',
+    flex: 1,
+    padding: 4,
+    backgroundColor: '#CCC'
+},
 text: {
-   padding: 4,
-   height: 40,
-   backgroundColor: '#aaa',
-   alignSelf: 'stretch'
 }
 });  
