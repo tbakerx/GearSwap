@@ -6,6 +6,8 @@ import{
   Image
 } from 'react-native';
 
+import Separator from '../components/Separator.js';
+
 const marginValue = 8;
 
 export default class Item extends Component<{}> {
@@ -20,7 +22,11 @@ export default class Item extends Component<{}> {
       return(
          <View style={[{width:size, height:size}, styles.item]} >
             <Image style={[{width:size}, styles.image]} source={require('../../src/images/test.jpg')} />
-            <View style={styles.itemInfo}><Text style={styles.text} >Test Item</Text></View>
+            <View style={styles.itemInfo}>
+                <Image style={styles.profileImage} source={require('../../src/images/logo.png')}/>
+                <Separator />
+                <Text style={styles.text} >{this.props.title}</Text>
+            </View>
          </View> 
       );
     }
@@ -36,11 +42,20 @@ image:{
     flex:9
 },
 itemInfo:{
+    flexDirection: 'row',
     alignItems: 'center',
     flex: 1,
     padding: 4,
     backgroundColor: '#CCC'
 },
+profileImage:{
+    flex: 1,
+    height: 25,
+    width: 15,
+    borderRadius: 25
+},
 text: {
+    flex: 5,
+    color: '#555'
 }
 });  
