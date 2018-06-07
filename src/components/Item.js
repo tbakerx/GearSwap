@@ -21,11 +21,17 @@ export default class Item extends Component<{}> {
         let size = this.props.size;
       return(
          <View style={[{width:size, height:size}, styles.item]} >
-            <Image style={[{width:size}, styles.image]} source={require('../../src/images/test.jpg')} />
+            <Image style={[{width:size}, styles.image]} source={this.props.mainImage} />
             <View style={styles.itemInfo}>
-                <Image style={styles.profileImage} source={require('../../src/images/logo.png')}/>
-                <Separator />
-                <Text style={styles.text} >{this.props.title}</Text>
+                <View style={styles.itemDistTitle}>
+                    <Text style={styles.itemDistance}>10km</Text>
+                    <Text style={styles.itemTitle}>{this.props.title}</Text>
+                </View>
+                <View style={styles.owner} >
+                    <Image style={styles.profileImage} source={this.props.profileImage}/>
+                    <Separator />
+                    <Text style={styles.name} >{this.props.owner}</Text>
+                </View>
             </View>
          </View> 
       );
@@ -39,14 +45,31 @@ item: {
     margin: marginValue 
 },
 image:{
-    flex:9
+    flex:7
 },
 itemInfo:{
-    flexDirection: 'row',
     alignItems: 'center',
-    flex: 1,
-    padding: 4,
+    flex: 2,
     backgroundColor: '#CCC'
+},
+itemDistTitle:{
+    flexDirection: 'row',
+    borderBottomColor: '#bbb',
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    paddingBottom:2,
+    alignSelf:'stretch'
+
+},
+itemDistance:{
+    flex: 1
+},
+itemTitle:{
+    flex: 3
+},
+owner:{
+    flexDirection: 'row',
+    paddingBottom: 2
+
 },
 profileImage:{
     flex: 1,
@@ -54,7 +77,7 @@ profileImage:{
     width: 15,
     borderRadius: 25
 },
-text: {
+name: {
     flex: 5,
     color: '#555'
 }

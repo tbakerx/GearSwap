@@ -45,10 +45,13 @@ import{
 
     render(){
 
-      let size = this._calculateItemSize();  
+      let size = this._calculateItemSize();
+      let owner = "John Doe";  
+      let profileImage = require('../../src/images/test.jpg');
+      let mainImage = require('../../src/images/logo.png');
       let items = this.Item_List.map(function(item,key){
           return(
-            <Item key={key} title={item.toString()} size={size}></Item>
+            <Item key={key} mainImage={mainImage} title={item.toString()} owner={owner} profileImage={profileImage} size={size}></Item>
           )
       });
 
