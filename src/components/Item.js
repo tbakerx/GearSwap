@@ -29,7 +29,6 @@ export default class Item extends Component<{}> {
                 </View>
                 <View style={styles.owner} >
                     <Image style={styles.profileImage} source={this.props.profileImage}/>
-                    <Separator />
                     <Text style={styles.name} >{this.props.owner}</Text>
                 </View>
             </View>
@@ -53,32 +52,39 @@ itemInfo:{
     backgroundColor: '#CCC'
 },
 itemDistTitle:{
+    flex: 1,
     flexDirection: 'row',
     borderBottomColor: '#bbb',
     borderBottomWidth: StyleSheet.hairlineWidth,
-    paddingBottom:2,
     alignSelf:'stretch'
 
 },
 itemDistance:{
-    flex: 1
+    flex: 1,
+    borderRightColor:'#bbb',
+    borderRightWidth: StyleSheet.hairlineWidth
 },
 itemTitle:{
-    flex: 3
+    flex: 3,
+    marginLeft: 5
 },
 owner:{
+    flex: 1,
     flexDirection: 'row',
-    paddingBottom: 2
 
 },
 profileImage:{
     flex: 1,
-    height: 25,
-    width: 15,
-    borderRadius: 25
+    justifyContent: 'center',
+    alignItems: 'center',
+    resizeMode: 'cover',
+    borderRadius: 25,
 },
 name: {
-    flex: 5,
-    color: '#555'
+    flex: 7,
+    color: '#555',
+    paddingLeft: 5,
+    borderLeftColor:'#bbb',
+    borderLeftWidth: StyleSheet.hairlineWidth
 }
 });  
