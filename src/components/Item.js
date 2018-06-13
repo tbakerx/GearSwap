@@ -6,8 +6,6 @@ import{
   Image
 } from 'react-native';
 
-import Separator from '../components/Separator.js';
-
 const marginValue = 8;
 
 export default class Item extends Component<{}> {
@@ -24,12 +22,12 @@ export default class Item extends Component<{}> {
             <Image style={[{width:size}, styles.image]} source={this.props.mainImage} />
             <View style={styles.itemInfo}>
                 <View style={styles.itemDistTitle}>
-                    <Text style={styles.itemDistance}>10km</Text>
                     <Text style={styles.itemTitle}>{this.props.title}</Text>
+                    <Text style={styles.itemDistance}>{this.props.distance}</Text>
                 </View>
                 <View style={styles.owner} >
-                    <Image style={styles.profileImage} source={this.props.profileImage}/>
-                    <Text style={styles.name} >{this.props.owner}</Text>
+                    <View style={styles.imageContainer}><Image style={styles.profileImage} source={this.props.profileImage}/></View>
+                    <View style={styles.nameContainer}><Text style={styles.name} >{this.props.owner}</Text></View>
                 </View>
             </View>
          </View> 
@@ -60,31 +58,35 @@ itemDistTitle:{
 
 },
 itemDistance:{
-    flex: 1,
-    borderRightColor:'#bbb',
-    borderRightWidth: StyleSheet.hairlineWidth
+    flex: 1
 },
 itemTitle:{
     flex: 3,
-    marginLeft: 5
+    marginRight: 5,
+    borderRightColor:'#bbb',
+    borderRightWidth: StyleSheet.hairlineWidth
 },
 owner:{
     flex: 1,
     flexDirection: 'row',
 
 },
-profileImage:{
+imageContainer:{
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent:'center',
+    alignItems:'center'
+},
+profileImage:{
+    width:'90%',
+    height:'90%',
     resizeMode: 'cover',
     borderRadius: 25,
 },
-name: {
+nameContainer:{
     flex: 7,
+},
+name: {
     color: '#555',
     paddingLeft: 5,
-    borderLeftColor:'#bbb',
-    borderLeftWidth: StyleSheet.hairlineWidth
 }
 });  
