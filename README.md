@@ -9,9 +9,15 @@ While traveling Southeast Asia, my buddy and I came across a problem that was ex
 ### Still to do
 
 - [x] Login and Sign Up Pages
-- [ ] oAuth Login with firebase
-- [ ] Profile Page
 - [x] Main page (populated with items)
+- [ ] View Item Page
 - [ ] Post new items page
+- [ ] Notifications Tab
+- [ ] Categories Menu Tab
+- [ ] Chat List
+- [ ] Chat Page
+- [ ] Profile Settings
+- [ ] Profile Page
+- [ ] oAuth Login with firebase
 
 
