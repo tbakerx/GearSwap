@@ -11,7 +11,7 @@ While traveling Southeast Asia, my buddy and I came across a problem that was ex
 - [x] Login and Sign Up Pages
 - [ ] oAuth Login with firebase
 - [ ] Profile Page
-- [ ] Main page (populated with items)
+- [x] Main page (populated with items)
 - [ ] Post new items page
 
 
