@@ -48,7 +48,7 @@ export default class Home extends Component<{}> {
         justifyContent: 'center'
     },
     main:{
-        flex: 10,
+        flex: 12,
         backgroundColor: '#bc8600',
         alignItems: 'center',
         justifyContent: 'center'
