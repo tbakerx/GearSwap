@@ -24,6 +24,7 @@ export default class Home extends Component<{}> {
       return (
         <View style={styles.container}>
             <View style={styles.topBar}><Text style={styles.headerText}>GearSwap</Text></View>
+            <View style={styles.tabMenu}><Text style={styles.tabMenuText}>Please Sign Up or Log In</Text></View>
             <View style={styles.main}><ItemList></ItemList></View>
             <View style={styles.bottomBar}>
             <TouchableOpacity onPress={this.signUp}><Text style={styles.signUpButton}>Sign Up</Text></TouchableOpacity>
@@ -43,19 +44,29 @@ export default class Home extends Component<{}> {
     },
     topBar:{
         flex: 1,
-        backgroundColor: '#0d47a1',
+        backgroundColor: '#78580D',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    tabMenu:{
+        flex: 1,
+        backgroundColor:'#B0B6BD',
         alignItems: 'center',
         justifyContent: 'center'
     },
+    tabMenuText:{
+        fontSize: 20,
+        color: "#bb5555"
+    },
     main:{
         flex: 12,
-        backgroundColor: '#bc8600',
+        backgroundColor: '#E0E7F3',
         alignItems: 'center',
         justifyContent: 'center'
     },
     bottomBar:{
         flex: 1,
-        backgroundColor: 'green',
+        backgroundColor: '#B0B6BD',
         alignItems: 'center',
         flexDirection: 'row',
         justifyContent: 'space-around'
@@ -66,8 +77,13 @@ export default class Home extends Component<{}> {
         color: '#ddd'
     },
     signUpButton: {
-        color: '#ccc',
+        color: '#BC8600',
         fontSize:16,
-        fontWeight: '500'
-      }
+        fontWeight: '500',
+      },
+    separator:{
+        borderRightWidth:1,
+        borderRightColor: 'black'
+    },
+
   });

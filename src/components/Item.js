@@ -47,7 +47,7 @@ image:{
 itemInfo:{
     alignItems: 'center',
     flex: 2,
-    backgroundColor: '#CCC'
+    backgroundColor: '#B0B6BD'
 },
 itemDistTitle:{
     flex: 1,

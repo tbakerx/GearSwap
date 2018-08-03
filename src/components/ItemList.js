@@ -69,7 +69,6 @@ import{
 
   const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#bc8600',
         padding: paddingValue
     },  
     list: {
