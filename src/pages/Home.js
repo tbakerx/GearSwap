@@ -23,7 +23,7 @@ export default class Home extends Component<{}> {
     render() {
       return (
         <View style={styles.container}>
-            <View style={styles.topBar}><Text style={styles.headerText}>GearSwap</Text></View>
+            <View style={styles.topBar}><Text style={styles.headerText1}>Gear|</Text><Text style={styles.headerText2}>Swap</Text></View>
             <View style={styles.tabMenu}><Text style={styles.tabMenuText}>Please Sign Up or Log In</Text></View>
             <View style={styles.main}><ItemList></ItemList></View>
             <View style={styles.bottomBar}>
@@ -44,9 +44,10 @@ export default class Home extends Component<{}> {
     },
     topBar:{
         flex: 1,
-        backgroundColor: '#78580D',
+        backgroundColor: '#164DA4',
         alignItems: 'center',
         justifyContent: 'center',
+        flexDirection: 'row'
     },
     tabMenu:{
         flex: 1,
@@ -71,9 +72,14 @@ export default class Home extends Component<{}> {
         flexDirection: 'row',
         justifyContent: 'space-around'
     },
-    headerText:{
+    headerText1:{
+        fontFamily:"stoneburg",
+        fontSize: 40,
+        color: '#ddd'
+    },
+    headerText2:{
+        fontFamily:"mandorlatoB",
         fontSize: 30,
-        fontWeight: '500',
         color: '#ddd'
     },
     signUpButton: {
