@@ -46,11 +46,11 @@ image:{
 },
 itemInfo:{
     alignItems: 'center',
-    flex: 2,
-    backgroundColor: '#B0B6BD'
+    flex: 3,
+    backgroundColor: '#fff'
 },
 itemDistTitle:{
-    flex: 1,
+    flex: 3,
     flexDirection: 'row',
     borderBottomColor: '#bbb',
     borderBottomWidth: StyleSheet.hairlineWidth,
@@ -67,7 +67,7 @@ itemTitle:{
     borderRightWidth: StyleSheet.hairlineWidth
 },
 owner:{
-    flex: 1,
+    flex: 2,
     flexDirection: 'row',
 
 },
@@ -77,16 +77,14 @@ imageContainer:{
     alignItems:'center'
 },
 profileImage:{
-    width:'90%',
-    height:'90%',
-    resizeMode: 'cover',
-    borderRadius: 25,
+    height:'100%',
+    resizeMode: 'contain'
 },
 nameContainer:{
     flex: 7,
 },
 name: {
     color: '#555',
-    paddingLeft: 5,
+    paddingLeft: 10,
 }
 });  

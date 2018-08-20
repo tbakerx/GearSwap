@@ -12,7 +12,7 @@ export default class Logo extends Component<{}> {
         <View style={styles.container}>
           <Image style={{width: 125, height: 125}}
                  source={require('../../src/images/logo.png')} />
-          <Text style={styles.logoText}>Gear<Text style={styles.logoTextAlt}>Swap </Text></Text>
+          <Image style = {styles.logoText} source={require('../../src/images/colored.png')} />       
         </View>
     );
   }
@@ -24,17 +24,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
   },
-  logoText: {
-    marginVertical: 15,
-    fontSize: 42,
-    fontWeight: '500',
-    fontStyle: 'italic',
-    color: '#ccc'
-  },
-  logoTextAlt:{
-    color: '#0d47a1',
-    textShadowOffset: {width: 1, height: 1},
-    textShadowColor: '#ccc',
-    textShadowRadius: 7,
+  logoText:{
+    width: 300,
+    resizeMode: 'contain'
   }
 });
