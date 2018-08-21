@@ -3,10 +3,13 @@ import React, {Component} from 'react';
 import{
     StyleSheet,
     ScrollView,
-    Dimensions
+    Dimensions,
+    TouchableOpacity
   } from 'react-native';
 
   import Item from '../components/Item';
+
+  import {Actions} from 'react-native-router-flux';
 
   const paddingValue = 8;
 
@@ -42,6 +45,7 @@ import{
         let {height, width} = Dimensions.get('window');
         return (width - paddingValue * 6) / 2;
       }
+     
 
     render(){
 
