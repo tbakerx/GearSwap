@@ -24,11 +24,12 @@ export default class Home extends Component<{}> {
     render() {
       return (
         <View style={styles.container}>
-            <View style={styles.topBar}><Image style = {styles.logoText} source={require('../../src/images/dark.png')}/></View>
-            <View style={styles.tabMenu}><Text style={styles.tabMenuText}>Please Sign Up or Log In</Text></View>
+            <View elevation={10} style={styles.topBar}><Image style = {styles.logoText} source={require('../../src/images/dark.png')}/></View>
+            <View elevation={5} style={styles.tabMenu}><Text style={styles.tabMenuText}>Please Sign Up or Log In</Text></View>
             <View style={styles.main}><ItemList></ItemList></View>
-            <View style={styles.bottomBar}>
+            <View elevation={10} style={styles.bottomBar}>
             <TouchableOpacity onPress={this.signUp}><Text style={styles.signUpButton}>Sign Up</Text></TouchableOpacity>
+            <Text style={styles.separator}></Text>
             <TouchableOpacity onPress={this.Login}><Text style={styles.signUpButton}>Login</Text></TouchableOpacity>
             </View>  
         </View>
@@ -48,7 +49,11 @@ export default class Home extends Component<{}> {
         backgroundColor: '#164DA4',
         alignItems: 'center',
         justifyContent: 'center',
-        flexDirection: 'row'
+        flexDirection: 'row',
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.3,
+        shadowRadius: 10
     },
     logoText:{
         height: '100%',
@@ -75,7 +80,11 @@ export default class Home extends Component<{}> {
         backgroundColor: '#fff',
         alignItems: 'center',
         flexDirection: 'row',
-        justifyContent: 'space-around'
+        justifyContent: 'space-around',
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.3,
+        shadowRadius: 10
     },
     signUpButton: {
         color: '#164da4',
@@ -83,8 +92,9 @@ export default class Home extends Component<{}> {
         fontWeight: '500',
       },
     separator:{
-        borderRightWidth:1,
-        borderRightColor: 'black'
-    },
-
+    marginLeft: -15,    
+    height: '100%',    
+    borderLeftColor:'#bbb',
+    borderLeftWidth: StyleSheet.hairlineWidth
+    },  
   });
